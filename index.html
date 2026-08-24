@@ -635,6 +635,41 @@
       .hero-copy h1 { font-size: clamp(2.75rem, 13vw, 4rem); }
       .signal-strip, .content-section { padding-inline: 20px; }
     }
+
+    /* Revised type hierarchy */
+    .wordmark { font-size: clamp(1.55rem, 2.2vw, 2rem); }
+    .wordmark small { font-size: clamp(.78rem, 1.05vw, .94rem); margin-top: 4px; }
+    .section-heading .eyebrow,
+    .lab-panel .eyebrow,
+    .contact-panel .eyebrow {
+      margin-bottom: 8px;
+      font-size: clamp(1.25rem, 2vw, 1.55rem);
+      letter-spacing: .06em;
+    }
+    .section-heading h2,
+    .lab-panel h2,
+    .contact-panel h2 {
+      max-width: 32ch;
+      font-size: clamp(1.45rem, 2.4vw, 2rem);
+      font-weight: 650;
+      line-height: 1.25;
+      letter-spacing: -.02em;
+    }
+    .publication-list a { color: var(--accent-deep); font-weight: 700; }
+    .lab-values {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .lab-values span:not(:last-child)::after { content: "·"; margin-left: 12px; color: #ff4944; }
+    @media (max-width: 960px) {
+      .lab-values { justify-content: flex-start; flex-wrap: wrap; }
+    }
   </style>
 </head>
 <body>
@@ -684,7 +719,6 @@
           <div class="hero-actions">
             <a class="pill-link" href="https://www.depts.ttu.edu/imse/faculty/changwon_son/" target="_blank" rel="noreferrer">Texas Tech Profile</a>
             <a class="pill-link" href="https://scholar.google.com/scholar?q=Changwon+Son+Texas+Tech+University" target="_blank" rel="noreferrer">Google Scholar</a>
-            <a class="pill-link" href="https://www.thesharelab.org" target="_blank" rel="noreferrer">SHARE Lab</a>
           </div>
           <ul class="hero-highlights" aria-label="Research focus areas">
             <li>Human–AI teaming, trust, communication, and coordination</li>
@@ -777,54 +811,127 @@
               through research, education, service, and collaboration.
             </p>
           </div>
-          <div class="lab-actions">
-            <a class="pill-link" href="https://www.thesharelab.org/research.html" target="_blank" rel="noreferrer">Explore lab research</a>
-            <a class="pill-link" href="https://www.thesharelab.org/opportunities.html" target="_blank" rel="noreferrer">Join the lab</a>
+          <div class="lab-values" aria-label="SHARE Lab values">
+            <span>Research</span><span>Education</span><span>Service</span>
           </div>
         </div>
       </section>
 
       <section class="content-section reveal" id="publications">
         <div class="section-heading">
-          <p class="eyebrow">Selected publications</p>
-          <h2>Recent work across safety, resilience, and human-centered technology.</h2>
+          <p class="eyebrow">Publications</p>
+          <h2>Peer-reviewed journal publications, 2018–2026.</h2>
         </div>
         <ol class="publication-list">
           <li>
             Son, C., Parker, K., & Jamshidzadeh, M. (2026).
             <em>Effects of a Semantically Irrelevant Virtual Reality Experience on Memory and Emotion After Watching a Traumatic Event.</em>
             JMIR Formative Research, 10, e75848.
+            <a href="https://formative.jmir.org/2026/1/e75848" target="_blank" rel="noreferrer">Article</a>
           </li>
           <li>
             Shultz, C., & Son, C. (2025).
             <em>Multiple Simultaneous Disasters as a Complex Challenge to Disaster Management.</em>
             Journal of Homeland Security and Emergency Management, 22(3), 247–274.
+            <a href="https://doi.org/10.1515/jhsem-2025-0010" target="_blank" rel="noreferrer">DOI</a>
           </li>
           <li>
             Park, J., Rathenberg, A., Panko, J., McGhie, Z., & Son, C. (2025).
             <em>Identifying Smart Technology and Artificial Intelligence Solutions for Human Factors and Ergonomic Challenges in All-Hazard Response.</em>
             Applied Ergonomics, 126, 104488.
+            <a href="https://doi.org/10.1016/j.apergo.2025.104488" target="_blank" rel="noreferrer">DOI</a>
           </li>
           <li>
             Son, C., Ham, D. H., Jin, S., & Park, T. (2025).
             <em>158 Deaths at Halloween Night: An AcciMap Analysis of the 2022 Itaewon Crowd Crush.</em>
             Safety Science, 184, 106741.
+            <a href="https://doi.org/10.1016/j.ssci.2024.106741" target="_blank" rel="noreferrer">DOI</a>
           </li>
           <li>
             Dos Santos, V., & Son, C. (2024).
             <em>Identifying Firefighters' Situation Awareness Requirements for Fire and Non-Fire Emergencies.</em>
-            Applied Ergonomics, 114, 104126.
+            Applied Ergonomics, 114, 104136.
+            <a href="https://doi.org/10.1016/j.apergo.2023.104136" target="_blank" rel="noreferrer">DOI</a>
           </li>
           <li>
             Son, C. (2023).
             <em>Disaster Ergonomics: A Human Factors Approach to Address Escalating Challenges from Disasters.</em>
-            Cognition, Technology & Work.
+            Cognition, Technology & Work, 25, 325–344.
+            <a href="https://doi.org/10.1007/s10111-023-00736-4" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Moon, J., Sasangohar, F., Peres, S. C., & Son, C. (2024).
+            <em>Naturalistic Observations of Multiteam Interaction Networks: Implications for Cognition in Crisis Management Teams.</em>
+            Ergonomics, 67(3), 305–326.
+            <a href="https://doi.org/10.1080/00140139.2023.2221418" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Son, C., Hegde, S., Markert, C., Zahed, K., & Sasangohar, F. (2023).
+            <em>Use of a Mobile Biofeedback App to Provide Health Coaching for Stress Self-management: Pilot Quasi-Experiment.</em>
+            JMIR Formative Research, 7(1), e41018.
+            <a href="https://doi.org/10.2196/41018" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Son, C., Sasangohar, F., Peres, S. C., & Moon, J. (2023).
+            <em>Analyzing Work-as-Imagined and Work-as-Done of Incident Management Teams Using Interaction Episode Analysis.</em>
+            Theoretical Issues in Ergonomics Science, 24(6), 729–757.
+            <a href="https://doi.org/10.1080/1463922X.2022.2153495" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Wang, X., Hegde, S., Son, C., Keller, B., Smith, A., & Sasangohar, F. (2020).
+            <em>Investigating Mental Health of US College Students During the COVID-19 Pandemic: Cross-Sectional Survey Study.</em>
+            Journal of Medical Internet Research, 22(9), e22817.
+            <a href="https://www.jmir.org/2020/9/e22817" target="_blank" rel="noreferrer">Article</a>
+          </li>
+          <li>
+            Son, C., Hegde, S., Smith, A., Wang, X., & Sasangohar, F. (2020).
+            <em>Effects of COVID-19 on College Students' Mental Health in the United States: Interview Survey Study.</em>
+            Journal of Medical Internet Research, 22(9), e21279.
+            <a href="https://www.jmir.org/2020/9/e21279" target="_blank" rel="noreferrer">Article</a>
+          </li>
+          <li>
+            Moon, J., Sasangohar, F., Son, C., & Peres, S. C. (2020).
+            <em>Cognition in Crisis Management Teams: An Integrative Analysis of Definitions.</em>
+            Ergonomics, 63(10), 1240–1256.
+            <a href="https://doi.org/10.1080/00140139.2020.1781936" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Son, C., Sasangohar, F., Peres, S. C., & Moon, J. (2020).
+            <em>Muddling Through Troubled Water: Resilient Performance of Incident Management Teams During Hurricane Harvey.</em>
+            Ergonomics, 63(6), 643–659. Best Paper Shortlisted.
+            <a href="https://doi.org/10.1080/00140139.2020.1752820" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Son, C., Larsen, E. P., Sasangohar, F., & Peres, S. C. (2020).
+            <em>Opportunities and Challenges for Resilient Hospital Incident Management: Case Study of a Hospital's Response to Hurricane Harvey.</em>
+            Journal of Critical Infrastructure Policy, 1(1), 81–104. Best Presentation Award.
+            <a href="https://doi.org/10.18278/jcip.1.1.7" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Son, C., Sasangohar, F., Peres, S. C., Neville, T. J., & Moon, J. (2020).
+            <em>Investigating Resilience in Emergency Management: An Integrative Review of Literature.</em>
+            Applied Ergonomics, 87, 103114.
+            <a href="https://doi.org/10.1016/j.apergo.2020.103114" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Son, C., Sasangohar, F., Peres, S. C., Neville, T. J., & Moon, J. (2020).
+            <em>Evaluation of Work-as-Done in Information Management of a Multidisciplinary Incident Management Team via Interaction Episode Analysis.</em>
+            Applied Ergonomics, 84, 103031.
+            <a href="https://doi.org/10.1016/j.apergo.2019.103031" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Son, C., Sasangohar, F., Rao, A., & Larsen, E. P. (2019).
+            <em>Resilient Performance of Emergency Department: Patterns, Models and Strategies.</em>
+            Safety Science, 120, 362–373.
+            <a href="https://doi.org/10.1016/j.ssci.2019.07.010" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Son, C., Sasangohar, F., Peres, S. C., Neville, T. J., Moon, J., & Mannan, M. S. (2018).
+            <em>Modeling an Incident Management Team as a Joint Cognitive System.</em>
+            Journal of Loss Prevention in the Process Industries, 56, 231–241.
+            <a href="https://doi.org/10.1016/j.jlp.2018.07.021" target="_blank" rel="noreferrer">DOI</a>
           </li>
         </ol>
-        <p class="publication-note">
-          See the complete and current record on
-          <a href="https://www.thesharelab.org/publications.html" target="_blank" rel="noreferrer">the SHARE Lab publications page</a>.
-        </p>
       </section>
 
       <section class="content-section reveal" id="teaching">
@@ -873,7 +980,6 @@
           </div>
           <div class="contact-actions">
             <a class="contact-link" href="mailto:Changwon.Son@ttu.edu">Changwon.Son@ttu.edu</a>
-            <a class="contact-link" href="https://www.thesharelab.org/contact.html" target="_blank" rel="noreferrer">Contact page</a>
           </div>
         </div>
       </section>
