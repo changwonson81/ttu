@@ -673,6 +673,106 @@
     @media (max-width: 960px) {
       .lab-values { justify-content: flex-start; flex-wrap: wrap; }
     }
+
+    /* Full-width, responsive layout */
+    html, body { width: 100%; overflow-x: hidden; }
+
+    .ttu-masthead-inner,
+    .site-header,
+    .hero,
+    .signal-strip,
+    .content-section,
+    .site-footer,
+    .footer-inner {
+      width: 100%;
+      max-width: none;
+    }
+
+    .ttu-masthead-inner,
+    .site-header,
+    .hero,
+    .signal-strip,
+    .content-section,
+    .footer-inner {
+      padding-left: clamp(20px, 4vw, 72px);
+      padding-right: clamp(20px, 4vw, 72px);
+    }
+
+    .site-header { gap: clamp(18px, 3vw, 48px); }
+    .wordmark { min-width: max-content; }
+    .site-nav { margin-left: auto; justify-content: flex-end; gap: clamp(10px, 1.5vw, 24px); }
+
+    h1, h2,
+    .hero-copy h1,
+    .section-heading h2,
+    .lab-panel h2,
+    .contact-panel h2,
+    .hero-text,
+    .signal-copy p:last-child,
+    .section-heading p:not(.eyebrow),
+    .contact-panel p:last-child {
+      max-width: none;
+    }
+
+    .hero { grid-template-columns: minmax(0, 2fr) minmax(320px, .8fr); }
+    .hero-copy, .hero-card, .signal-copy, .section-heading,
+    .info-card, .project-card, .teaching-card, .award-card,
+    .contact-panel > div, .lab-panel > div { min-width: 0; }
+    .research-grid, .project-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .teaching-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .award-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .publication-list { width: 100%; }
+
+    p, li, h1, h2, h3, a, span { overflow-wrap: anywhere; }
+
+    @media (max-width: 1180px) {
+      .site-header { align-items: center; }
+      .wordmark { min-width: 0; white-space: normal; }
+      .site-nav { flex-wrap: wrap; row-gap: 8px; }
+      .teaching-grid, .award-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 960px) {
+      .hero, .signal-strip, .lab-panel { grid-template-columns: 1fr; }
+      .research-grid, .project-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .contact-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
+    }
+
+    @media (max-width: 720px) {
+      html { scroll-padding-top: 92px; }
+      .ttu-masthead-inner { min-height: 76px; }
+      .site-header { min-height: 64px; margin-bottom: 24px; }
+      .site-nav { margin-left: 0; width: 100%; }
+      .site-nav a { width: 100%; }
+      .hero, .signal-strip, .content-section, .footer-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .research-grid, .project-list, .teaching-grid, .award-grid,
+      .contact-panel { grid-template-columns: 1fr; }
+      .contact-actions, .contact-link { width: 100%; }
+      .contact-link { white-space: normal; text-align: center; }
+      .profile-pic { width: 100%; height: min(105vw, 440px); }
+      .publication-list { padding: 22px 22px 22px 42px; }
+    }
+
+    @media (max-width: 420px) {
+      .ttu-masthead-inner, .site-header,
+      .hero, .signal-strip, .content-section, .footer-inner {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .ttu-logo { width: min(300px, 82vw); }
+      .wordmark { font-size: 1.3rem; }
+      .wordmark small { font-size: .7rem; }
+      .hero-copy { padding: 34px 20px; }
+      .hero-copy h1 { font-size: clamp(2.15rem, 12vw, 3rem); }
+      .hero-copy .eyebrow { font-size: clamp(1.35rem, 8vw, 1.8rem); }
+      .hero-actions, .pill-link { width: 100%; }
+      .info-card, .project-card, .teaching-card, .award-card,
+      .contact-panel, .lab-panel { padding: 20px; }
+      .publication-list { padding: 20px 18px 20px 36px; }
+    }
   </style>
 </head>
 <body>
